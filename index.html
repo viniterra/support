@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support for Unity Asset Store packages</title>
+  <style>
+    html, body { margin: 0; height: 100%; }
+    iframe { border: 0; width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="form" title="Support form"></iframe>
+  <script>
+    var EXEC_URL = 'https://script.google.com/macros/s/AKfycbzgxQ4io24MNCR6gXmjCFMrWyNfAYGV_C3NAs3x2qfSCXxC75dBOsiH4Bor67rt3_bO5A/exec';
+    var pkg = new URLSearchParams(location.search).get('package');
+    document.getElementById('form').src =
+      EXEC_URL + (pkg ? '?package=' + encodeURIComponent(pkg) : '');
+  </script>
+</body>
+</html>
