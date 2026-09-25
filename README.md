@@ -1,2 +1,0 @@
-# support
-Unity Packages Support
